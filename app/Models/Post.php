@@ -9,6 +9,11 @@ class Post extends Model
 {
     /** @use HasFactory<\Database\Factories\PostFactory> */
     use HasFactory;
+   
+
+    protected $fillable = ['title', 'content', 'user_id'];
+
+
     public function categories(){
         return $this->belongToMany(Category::class);
 
@@ -20,6 +25,4 @@ class Post extends Model
     public function comments(){
         return $this->hasMany(Comment::class);
     }
-
-    protected $fillable = ['title', 'content', 'user_id'];
 }

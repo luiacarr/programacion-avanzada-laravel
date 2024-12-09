@@ -14,10 +14,12 @@ class PostController extends Controller
 
     {
         // return Post::with{['categories','tags','comments.user']}->findOrFail($id);
-        $Post = Post::get();
+        // $Post = Post::get();
 
-        $posts=Post::with(['categories','tags','comments'])->get();
+        $Post=Post::with(['categories','tags','comments'])->get();
         return $Post;
+
+    
         
         //
     
