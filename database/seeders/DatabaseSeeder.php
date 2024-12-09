@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+
         // User::factory(10)->create();
 
         // User::factory()->create([
@@ -20,7 +21,13 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         
+
         $this->call(UserSeeder::class);
+        $this->call(PostSeeder::class);
+        $this->call(CategorySeeder::class);
+        $this->call(PostCategorySeeder::class);
+        $this->call(CommentSeeder::class);
+        $this->call(PostTagSeeder::class);
         $this->call(PostSeeder::class);
     }
 }
