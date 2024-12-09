@@ -14,38 +14,50 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::with(['categories', 'tags', 'comments'])->get();
+
+        return $posts;
+        // git add .
+        // git commit -m "Add PostController"
+        // git push
     }
 
     // Guarda un nuevo post y cachea el resultado
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'content' => 'required|string',
-            'category_ids' => 'array',
-            'tag_ids' => 'array',
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
         ]);
 
-        $post = Post::create($validated);
-        $post->categories()->sync($request->category_ids);
-        $post->tags()->sync($request->tag_ids);
+        Post::create([
+            'title' => $request->title,
+            'content' => $request->content,
+            'user_id' => 1,
+        ]);
 
-        // Cacheamos el nuevo post
-        Cache::put("post_{$post->id}", $post, 60);
+        return redirect()->route('posts.index')->with('success', 'Post created successfully.');
+    }
 
-        return redirect()->route('posts.show', $post);
+    public function create()
+    {
+        return view('posts.create');
     }
 
     // Muestra un post con sus categorías, tags y comentarios
     public function show($id)
     {
-        // $post = Cache::remember("post_{$id}", 60, function () use ($id) {
-            return Post::with(['categories', 'tags', 'comments.user'])->findOrFail($id);
-        // });
+        
+        return Post::with(['categories', 'tags', 'comments.user'])->findOrFail($id);
+        
+        // php artisan serve
+        
+        
+    }
 
-        // return $post;
-        // return view('posts.show', compact('post'));
+    public function edit(Post $post)
+    {
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -53,7 +65,14 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+        ]);
+
+        $post->update($request->all());
+
+        return redirect()->route('posts.index')->with('success', 'Post updated successfully.');
     }
 
     /**
@@ -61,7 +80,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+
+        return redirect()->route('posts.index')->with('success', 'Post deleted successfully.');
     }
 
     public function getUseCache(Request $request, User $user)
