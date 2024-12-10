@@ -1,6 +1,6 @@
 [
-    "Pest\\Arch\\Plugin",
     "Pest\\Laravel\\Plugin",
+    "Pest\\Arch\\Plugin",
     "Pest\\Mutate\\Plugins\\Mutate",
     "Pest\\Plugins\\Configuration",
     "Pest\\Plugins\\Bail",

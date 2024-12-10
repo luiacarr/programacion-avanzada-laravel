@@ -9,7 +9,6 @@ use ParaTest\JUnit\LogMerger;
 use ParaTest\JUnit\Writer;
 use ParaTest\Options;
 use ParaTest\RunnerInterface;
-use PHPUnit\Event\Facade as EventFacade;
 use PHPUnit\Runner\CodeCoverage;
 use PHPUnit\TestRunner\TestResult\Facade as TestResultFacade;
 use PHPUnit\TestRunner\TestResult\TestResult;
@@ -100,8 +99,6 @@ final class WrapperRunner implements RunnerInterface
         $directory = dirname(__DIR__);
         assert($directory !== '');
         ExcludeList::addDirectory($directory);
-        TestResultFacade::init();
-        EventFacade::instance()->seal();
         $suiteLoader = new SuiteLoader(
             $this->options,
             $this->output,
