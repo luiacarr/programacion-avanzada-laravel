@@ -103,6 +103,11 @@ class ComposerStaticIniteccc16ac2b20bff9a4ec17dd8264b434
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
         ),
+        'Q' => 
+        array (
+            'Qirolab\\Theme\\Database\\Factories\\' => 33,
+            'Qirolab\\Theme\\' => 14,
+        ),
         'P' => 
         array (
             'Psy\\' => 4,
@@ -176,6 +181,7 @@ class ComposerStaticIniteccc16ac2b20bff9a4ec17dd8264b434
             'Fruitcake\\Cors\\' => 15,
             'Fidry\\CpuCoreCounter\\' => 21,
             'Faker\\' => 6,
+            'Facade\\IgnitionContracts\\' => 25,
         ),
         'E' => 
         array (
@@ -219,8 +225,8 @@ class ComposerStaticIniteccc16ac2b20bff9a4ec17dd8264b434
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Whoops\\' => 
         array (
@@ -366,6 +372,14 @@ class ComposerStaticIniteccc16ac2b20bff9a4ec17dd8264b434
         array (
             0 => __DIR__ . '/..' . '/ramsey/collection/src',
         ),
+        'Qirolab\\Theme\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/qirolab/laravel-themer/database/factories',
+        ),
+        'Qirolab\\Theme\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/qirolab/laravel-themer/src',
+        ),
         'Psy\\' => 
         array (
             0 => __DIR__ . '/..' . '/psy/psysh/src',
@@ -380,8 +394,8 @@ class ComposerStaticIniteccc16ac2b20bff9a4ec17dd8264b434
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -465,8 +479,8 @@ class ComposerStaticIniteccc16ac2b20bff9a4ec17dd8264b434
         ),
         'League\\Uri\\' => 
         array (
-            0 => __DIR__ . '/..' . '/league/uri-interfaces',
-            1 => __DIR__ . '/..' . '/league/uri',
+            0 => __DIR__ . '/..' . '/league/uri',
+            1 => __DIR__ . '/..' . '/league/uri-interfaces',
         ),
         'League\\MimeTypeDetection\\' => 
         array (
@@ -570,6 +584,10 @@ class ComposerStaticIniteccc16ac2b20bff9a4ec17dd8264b434
         array (
             0 => __DIR__ . '/..' . '/fakerphp/faker/src/Faker',
         ),
+        'Facade\\IgnitionContracts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/facade/ignition-contracts/src',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
@@ -650,9 +668,13 @@ class ComposerStaticIniteccc16ac2b20bff9a4ec17dd8264b434
         'App\\Actions\\Fortify\\UpdateUserPassword' => __DIR__ . '/../..' . '/app/Actions/Fortify/UpdateUserPassword.php',
         'App\\Actions\\Fortify\\UpdateUserProfileInformation' => __DIR__ . '/../..' . '/app/Actions/Fortify/UpdateUserProfileInformation.php',
         'App\\Actions\\Jetstream\\DeleteUser' => __DIR__ . '/../..' . '/app/Actions/Jetstream/DeleteUser.php',
+        'App\\Events\\TaskStatusUpdated' => __DIR__ . '/../..' . '/app/Events/TaskStatusUpdated.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\TaskController' => __DIR__ . '/../..' . '/app/Http/Controllers/TaskController.php',
         'App\\Http\\Middleware\\HandleInertiaRequests' => __DIR__ . '/../..' . '/app/Http/Middleware/HandleInertiaRequests.php',
+        'App\\Models\\Task' => __DIR__ . '/../..' . '/app/Models/Task.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Policies\\TaskPolicy' => __DIR__ . '/../..' . '/app/Policies/TaskPolicy.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\FortifyServiceProvider' => __DIR__ . '/../..' . '/app/Providers/FortifyServiceProvider.php',
         'App\\Providers\\JetstreamServiceProvider' => __DIR__ . '/../..' . '/app/Providers/JetstreamServiceProvider.php',
@@ -1066,6 +1088,12 @@ class ComposerStaticIniteccc16ac2b20bff9a4ec17dd8264b434
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/Warning.php',
+        'Facade\\IgnitionContracts\\BaseSolution' => __DIR__ . '/..' . '/facade/ignition-contracts/src/BaseSolution.php',
+        'Facade\\IgnitionContracts\\HasSolutionsForThrowable' => __DIR__ . '/..' . '/facade/ignition-contracts/src/HasSolutionsForThrowable.php',
+        'Facade\\IgnitionContracts\\ProvidesSolution' => __DIR__ . '/..' . '/facade/ignition-contracts/src/ProvidesSolution.php',
+        'Facade\\IgnitionContracts\\RunnableSolution' => __DIR__ . '/..' . '/facade/ignition-contracts/src/RunnableSolution.php',
+        'Facade\\IgnitionContracts\\Solution' => __DIR__ . '/..' . '/facade/ignition-contracts/src/Solution.php',
+        'Facade\\IgnitionContracts\\SolutionProviderRepository' => __DIR__ . '/..' . '/facade/ignition-contracts/src/SolutionProviderRepository.php',
         'Faker\\Calculator\\Ean' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Calculator/Ean.php',
         'Faker\\Calculator\\Iban' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Calculator/Iban.php',
         'Faker\\Calculator\\Inn' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Calculator/Inn.php',
@@ -6275,6 +6303,25 @@ class ComposerStaticIniteccc16ac2b20bff9a4ec17dd8264b434
         'Psy\\VersionUpdater\\IntervalChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/IntervalChecker.php',
         'Psy\\VersionUpdater\\NoopChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/NoopChecker.php',
         'Psy\\VersionUpdater\\SelfUpdate' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/SelfUpdate.php',
+        'Qirolab\\Theme\\Commands\\MakeThemeCommand' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Commands/MakeThemeCommand.php',
+        'Qirolab\\Theme\\Enums\\CssFramework' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Enums/CssFramework.php',
+        'Qirolab\\Theme\\Enums\\JsFramework' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Enums/JsFramework.php',
+        'Qirolab\\Theme\\Exceptions\\ThemeBasePathNotDefined' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Exceptions/ThemeBasePathNotDefined.php',
+        'Qirolab\\Theme\\Middleware\\ThemeMiddleware' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Middleware/ThemeMiddleware.php',
+        'Qirolab\\Theme\\Presets\\Traits\\AuthScaffolding' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Presets/Traits/AuthScaffolding.php',
+        'Qirolab\\Theme\\Presets\\Traits\\HandleFiles' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Presets/Traits/HandleFiles.php',
+        'Qirolab\\Theme\\Presets\\Traits\\PackagesTrait' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Presets/Traits/PackagesTrait.php',
+        'Qirolab\\Theme\\Presets\\Traits\\PresetTrait' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Presets/Traits/PresetTrait.php',
+        'Qirolab\\Theme\\Presets\\Traits\\StubTrait' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Presets/Traits/StubTrait.php',
+        'Qirolab\\Theme\\Presets\\Vite\\BootstrapPreset' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Presets/Vite/BootstrapPreset.php',
+        'Qirolab\\Theme\\Presets\\Vite\\ReactPreset' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Presets/Vite/ReactPreset.php',
+        'Qirolab\\Theme\\Presets\\Vite\\TailwindPreset' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Presets/Vite/TailwindPreset.php',
+        'Qirolab\\Theme\\Presets\\Vite\\VitePresetExport' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Presets/Vite/VitePresetExport.php',
+        'Qirolab\\Theme\\Presets\\Vite\\Vue3Preset' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Presets/Vite/Vue3Preset.php',
+        'Qirolab\\Theme\\SolutionProviders\\ThemeSolutionProvider' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/SolutionProviders/ThemeSolutionProvider.php',
+        'Qirolab\\Theme\\Theme' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Theme.php',
+        'Qirolab\\Theme\\ThemeServiceProvider' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/ThemeServiceProvider.php',
+        'Qirolab\\Theme\\ThemeViewFinder' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/ThemeViewFinder.php',
         'Ramsey\\Collection\\AbstractArray' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractArray.php',
         'Ramsey\\Collection\\AbstractCollection' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractCollection.php',
         'Ramsey\\Collection\\AbstractSet' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractSet.php',
